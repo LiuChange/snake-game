@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贪吃蛇</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/snakeFood.js"></script>
+    <script src="js/snake.js"></script>
+
+</head>
+<body>
+<div class="map"></div>
+<script>
+
+    //背景
+    let oMap=document.getElementsByTagName('div')[0];
+
+    //食物
+    let snakeFood=new SnakeFood(100,100,'images/body.png');
+    snakeFood.render(oMap);
+     //蛇头和蛇身
+    let snake=new Snake(100,100,'images/head.png','images/body.png');
+    snake.render(oMap);
+    //蛇的移动
+    snake.move(oMap,snakeFood);
+
+
+</script>
+</body>
+</html>
